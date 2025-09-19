@@ -10,9 +10,12 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 
 // Middleware
+app.use(cors({
+  origin: "http://localhost:5173", // frontend URL
+  credentials: true                // allow cookies
+}));
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({credentials: true}));
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });

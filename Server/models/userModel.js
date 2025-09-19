@@ -31,11 +31,11 @@ const userSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
-    resetPasswordOtp: {
+    resetOtp: {
         type: String,
         default: '' 
     },
-    resetPasswordOtpExpiresAt: {
+    resetOtpExpiresAt: {
         type: Number,
         default: 0
     }   

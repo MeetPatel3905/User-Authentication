@@ -183,7 +183,7 @@ export const sendVerifyOtp = async (req, res) => {
         }
     }
 
-    export const resetPassword = async (req, res) => {
+    export const resetPassword  = async (req, res) => {
         const { email, otp, newPassword } = req.body;
         if (!email || !otp || !newPassword) {
             return res.status(400).json({ success: false, message: "Details are missing" });
